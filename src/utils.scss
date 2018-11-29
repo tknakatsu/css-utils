@@ -1,0 +1,247 @@
+// ==================================================
+// Utils
+// ==================================================
+
+/*
+
+単独で機能するスタイルです。局所的にスタイルを変更したい時などに使用します。
+基本的に全て`!important`を付与しており、最優先で適用されます。
+便利ですが、あまり多用し過ぎるとhtml側がメンテしづらくなるので使いすぎには気をつけましょう。
+
+*/
+
+.u-m0a {
+  margin: 0 auto !important;
+}
+
+$space-separate-count: 20;
+
+@for $i from 0 through $space-separate-count {
+  $space-actual-size: $i * 5;
+
+  .u-m#{$space-actual-size} {
+    margin: #{$space-actual-size}px !important;
+  }
+
+  .u-mt#{$space-actual-size} {
+    margin-top: #{$space-actual-size}px !important;
+  }
+
+  .u-mr#{$space-actual-size} {
+    margin-right: #{$space-actual-size}px !important;
+  }
+
+  .u-mb#{$space-actual-size} {
+    margin-bottom: #{$space-actual-size}px !important;
+  }
+
+  .u-ml#{$space-actual-size} {
+    margin-left: #{$space-actual-size}px !important;
+  }
+
+  .u-mv#{$space-actual-size} {
+    margin-top: #{$space-actual-size}px !important;
+    margin-bottom: #{$space-actual-size}px !important;
+  }
+
+  .u-mh#{$space-actual-size} {
+    margin-left: #{$space-actual-size}px !important;
+    margin-right: #{$space-actual-size}px !important;
+  }
+
+  .u-p#{$space-actual-size} {
+    padding: #{$space-actual-size}px !important;
+  }
+
+  .u-pt#{$space-actual-size} {
+    padding-top: #{$space-actual-size}px !important;
+  }
+
+  .u-pr#{$space-actual-size} {
+    padding-right: #{$space-actual-size}px !important;
+  }
+
+  .u-pb#{$space-actual-size} {
+    padding-bottom: #{$space-actual-size}px !important;
+  }
+
+  .u-pl#{$space-actual-size} {
+    padding-left: #{$space-actual-size}px !important;
+  }
+
+  .u-pv#{$space-actual-size} {
+    padding-top: #{$space-actual-size}px !important;
+    padding-bottom: #{$space-actual-size}px !important;
+  }
+
+  .u-ph#{$space-actual-size} {
+    padding-right: #{$space-actual-size}px !important;
+    padding-left: #{$space-actual-size}px !important;
+  }
+}
+
+// 0 to 1000px width
+// 0 から 50までは5刻み
+$width-separate-count: 9;
+
+@for $i from 1 through $width-separate-count {
+  $width-actual-size: $i * 5;
+
+  .u-w#{$width-actual-size} {
+    width: #{$width-actual-size}px !important;
+  }
+}
+
+$width-separate-count: 20;
+
+@for $i from 0 through $width-separate-count {
+  $width-actual-size: $i * 50;
+
+  .u-w#{$width-actual-size} {
+    width: #{$width-actual-size}px !important;
+  }
+}
+
+// 0 to 100% width
+$width-separate-percent-count: 20;
+
+@for $i from 0 through $width-separate-percent-count {
+  $width-actual-size: $i * 5;
+
+  .u-w#{$width-actual-size}per {
+    width: percentage($width-actual-size / 100) !important;
+  }
+}
+
+// 0 to 1000px height
+$height-separate-count: 20;
+
+@for $i from 0 through $height-separate-count {
+  $height-actual-size: $i * 50;
+
+  .u-h#{$height-actual-size} {
+    height: #{$height-actual-size}px !important;
+  }
+}
+
+// 0 to 100% height
+$height-separate-percent-count: 20;
+
+@for $i from 0 through $height-separate-percent-count {
+  $height-actual-size: $i * 5;
+
+  .u-h#{$height-actual-size}per {
+    height: percentage($height-actual-size / 100) !important;
+  }
+}
+
+// max height util
+// 0 to 100% height
+$height-separate-count: 10;
+
+@for $i from 0 through $height-separate-count {
+  $height-actual-size: $i * 100;
+
+  .u-maxh#{$height-actual-size} {
+    max-height: #{$height-actual-size}px !important;
+  }
+}
+
+// min height util
+// 0 to 1000px height 100px++
+$height-separate-count: 10;
+
+@for $i from 0 through $height-separate-count {
+  $height-actual-size: $i * 100;
+
+  .u-minh#{$height-actual-size} {
+    min-height: #{$height-actual-size}px !important;
+  }
+}
+
+// max width util
+// 0 to 1000px width 100px++
+$width-separate-count: 10;
+
+@for $i from 0 through $width-separate-count {
+  $width-actual-size: $i * 100;
+
+  .u-maxw#{$width-actual-size} {
+    max-width: #{$width-actual-size}px !important;
+  }
+}
+
+// min width util
+// 0 to 1000px width 100px++
+$width-separate-count: 10;
+
+@for $i from 0 through $width-separate-count {
+  $width-actual-size: $i * 100;
+
+  .u-minw#{$width-actual-size} {
+    min-width: #{$width-actual-size}px !important;
+  }
+}
+
+.u-w-auto {
+  width: auto !important;
+}
+
+.u-h-auto {
+  height: auto !important;
+}
+
+// display
+.u-block {
+  display: block !important;
+}
+
+.u-inline-block {
+  display: inline-block !important;
+}
+
+.u-none {
+  display: none !important;
+}
+
+.u-soft-none {
+  display: none;
+}
+
+// vertical-align
+.u-vat {
+  vertical-align: top !important;
+}
+
+.u-vam {
+  vertical-align: middle !important;
+}
+
+.u-vab {
+  vertical-align: bottom !important;
+}
+
+// text-align
+.u-txt-left {
+  text-align: left !important;
+}
+
+.u-txt-center {
+  text-align: center !important;
+}
+
+.u-txt-right {
+  text-align: right !important;
+}
+
+// white-space
+.u-txt-nowrap {
+  white-space: nowrap !important;
+}
+
+// text-overflow
+.u-txt-oneline {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

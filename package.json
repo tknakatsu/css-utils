@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  },
+  "scripts": {
+    "build": "node-sass --output-style=compressed src/utils.scss dist/utils.css"
+  }
+}
