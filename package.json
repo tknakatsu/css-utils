@@ -1,4 +1,9 @@
 {
+  "name": "css-utils",
+  "version": "1.0.0",
+  "description": "css utils",
+  "author": "tknakatsu",
+  "private": true,
   "dependencies": {
     "node-sass": "^4.10.0"
   },
